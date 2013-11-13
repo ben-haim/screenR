@@ -1,4 +1,9 @@
 
+if $TERM !~ "screen"
+    call RWarningMsgInp("Not inside GNU Screen! You have to start screen before starting Vim.")
+    finish
+endif
+
 if !exists("g:screenR_rh")
     let g:screenR_height = 15
 endif
